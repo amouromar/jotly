@@ -1,35 +1,12 @@
 import Link from "next/link";
-import { Poppins } from "next/font/google";
+import { poppins } from "./fonts";
 import { ArrowRight, Check } from "lucide-react";
-
-export const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-});
+import { features } from "./data/features";
 
 export const metadata = {
   title: "Jotly",
   description: "Jotly is a note-taking app",
 };
-
-export const features = [
-  {
-    title: "Minimalist Design",
-    description:
-      "A clean and simple interface that makes it easy to focus on your notes.",
-  },
-  {
-    title: "On-Device Storage",
-    description:
-      "Your notes are stored locally, so you can access them from any device.",
-  },
-  {
-    title: "Endless Creation",
-    description: "You can create as many notes as you want without any limit.",
-  },
-];
 
 export default function Home() {
   return (
