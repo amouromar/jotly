@@ -8,11 +8,18 @@ export default function NotesPage() {
   return (
     <NotesProvider>
       <div className="flex h-screen bg-gray-50">
-        {/* Sidebar */}
-        <Sidebar />
+        {/* Mobile Message - Only shows on small screens */}
+        <div className="md:hidden flex flex-col items-center justify-center w-full p-6 text-center">
+          <h2 className="text-xl font-semibold mb-2">Desktop Experience Required</h2>
+          <p className="text-gray-600 mb-4">Please use a desktop or laptop computer for the best experience.</p>
+          <p className="text-sm text-gray-500">This application is not optimized for mobile devices.</p>
+        </div>
 
-        {/* Main Content */}
-        <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Main Content - Hidden on small screens */}
+        <div className="hidden md:flex flex-1 flex-col overflow-hidden">
+          {/* Sidebar */}
+          <Sidebar />
+
           {/* Two-column layout */}
           <div className="flex flex-1 overflow-hidden">
             {/* Note List */}
